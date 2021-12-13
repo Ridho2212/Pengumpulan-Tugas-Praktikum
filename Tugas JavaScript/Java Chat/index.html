@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum JavaChatBox</title>
+</head>
+<style>
+    body {
+        background: rgb(255, 255, 255);
+    }
+
+    .layar {
+        width: 100%;
+        height: 400px;
+        background-color: rgb(94, 255, 247);
+    }
+
+    #box-input {
+        display: grid;
+        height: 50%;
+        align-items: end;
+    }
+
+    #ridhochat {
+        height: 50%;
+    }
+
+    input {
+        width: 90%;
+        height: 40px;
+    }
+
+    button {
+        width: 8%;
+        height: 40px;
+    }
+
+    .result {
+        width: 100%;
+    }
+</style>
+
+<body>
+
+    <div class="layar">
+        <div id="ridhochat">
+
+        </div>
+        <div id="box-input">
+            <div id="input">
+                <input type="text" name="message" id="message">
+                <button type="submit" id="submit" onclick="showChat();">Kirim</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script type="text/javascript">
+        function showChat() {
+            var chat = document.getElementById("message").value;
+
+            var node = document.createElement("div");
+
+            var textnode = document.createTextNode(chat);
+            node.appendChild(textnode);
+
+            document.getElementById("ridhochat").appendChild(node);
+        }
+    </script>
+
+
+</body>
+
+</html>
