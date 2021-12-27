@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chat.css">
+    <title>Chat JS</title>
+</head>
+
+<body>
+
+    <div id="box" class="chat">
+        <div id="RidhoChat">
+
+        </div>
+        <div id="box-input">
+            <div id="input">
+                <input type="text" name="message" id="message">
+                <button type="submit" id="submit" onclick="showChat();">Kirim</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script type="text/javascript">
+        function showChat() {
+            var isiChat = document.getElementById("message").value;
+
+            var node = document.createElement("div");
+            var textnode = document.createTextNode(isiChat);
+            node.appendChild(textnode);
+            document.getElementById("RidhoChat").appendChild(node);
+        }
+
+    </script>
+
+
+</body>
+
+</html>
